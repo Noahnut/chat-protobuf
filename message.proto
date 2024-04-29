@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+option go_package = "./chat-protobuf";
+package message;
 
 enum MessageType {
     SYSTEM = 0;
@@ -10,5 +12,6 @@ message Message {
     string id = 1;
     MessageType type = 2;
     string content = 3;
-    int64 timestamp = 4;
+    string target = 4;
+    int64 timestamp = 5;
 }
