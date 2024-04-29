@@ -1,6 +1,14 @@
 syntax = "proto3";
 
 
+enum MessageType {
+    SYSTEM = 0;
+    TEXT = 1;
+}
+
 message Message {
-    
+    string id = 1;
+    MessageType type = 2;
+    string content = 3;
+    int64 timestamp = 4;
 }
